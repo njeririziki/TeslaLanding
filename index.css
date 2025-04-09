@@ -1,0 +1,53 @@
+body{
+    /* background-color: aqua; */
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+    /* background-image: url("TeslaLandingPage.png");
+    background-size:cover;
+    background-repeat:no-repeat; */
+}
+.mainVideoBackground{
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.mainVideoBackground video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.companyHeader{
+    display:flex;
+    justify-content: space-between;
+    color:white;
+    font-weight:500;
+    font-size: 2rem;
+    
+}
+.middleText{
+    display:flex;
+    flex-direction: column;
+     align-items: center;
+   
+    color:white;
+    font-weight:500;
+    font-size: 2rem;
+    
+}
+.greenText{
+    color: #590d22;
+    font-weight: 500;
+    font-size: 2rem;
+}
