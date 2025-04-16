@@ -38,7 +38,7 @@ body{
 }
 .middleText{
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
      align-items: center;
    
     color:white;
@@ -50,4 +50,14 @@ body{
     color: #590d22;
     font-weight: 500;
     font-size: 2rem;
+}
+
+@media (max-width:400px) or (max-height:600px) { 
+    .middleText{
+        flex-direction: column; 
+    }
+    .mainVideoBackground video{
+       width: 70%;
+       height: 50%;
+    }
 }
