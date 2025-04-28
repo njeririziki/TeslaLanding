@@ -1,63 +1,111 @@
-body{
-    /* background-color: aqua; */
-    margin:0;
-    padding:0;
-    height:100%;
-    width:100%;
-    /* background-image: url("TeslaLandingPage.png");
+body {
+  /* background-color: aqua; */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  /* background-image: url("TeslaLandingPage.png");
     background-size:cover;
     background-repeat:no-repeat; */
 }
-.mainVideoBackground{
-    position: fixed;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+.mainVideoBackground {
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
-.mainVideoBackground video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+.mainVideoBackground video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
-.content{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1;
+.content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
-.companyHeader{
-    display:flex;
-    justify-content: space-between;
-    color:white;
-    font-weight:500;
-    font-size: 2rem;
-    
+.companyHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  font-weight: 500;
+  font-size: 2rem;
 }
-.middleText{
-    display:flex;
-    flex-direction: row;
-     align-items: center;
-   
-    color:white;
-    font-weight:500;
-    font-size: 2rem;
-    
+.navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
-.greenText{
-    color: #590d22;
-    font-weight: 500;
-    font-size: 2rem;
+.middleText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: white;
+  font-weight: 500;
+  font-size: 2rem;
+}
+.greenText {
+  color: #590d22;
+  font-weight: 500;
+  font-size: 2rem;
 }
 
-@media (max-width:400px) or (max-height:600px) { 
-    .middleText{
-        flex-direction: column; 
-    }
-    .mainVideoBackground video{
-       width: 70%;
-       height: 50%;
-    }
+@media (max-width: 400px) or (max-height: 600px) {
+  .middleText {
+    flex-direction: column;
+  }
+  .mainVideoBackground video {
+    width: 70%;
+    height: 50%;
+  }
 }
+
+.popupContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.popupButton {
+  background-color: #c2f5ee;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.popupButton:hover {
+  background-color: #00a89b;
+  color: white;
+}
+.popup {
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  margin-top: 1rem;
+  padding: 1rem 2rem 0 3rem;
+  background-color: white;
+  color: black;
+  z-index: 3;
+  text-align: center;
+  left: 50%;
+  display: none;
+  opacity: 0;
+}
+
+.showPopup {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+/* .popupContainer:hover .popup {
+  display: block;
+  opacity: 1;
+} */
