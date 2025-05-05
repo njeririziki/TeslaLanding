@@ -6,6 +6,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
     <script>
+      const overlay = document.getElementById("overlayId");
+
+      function showOverlay() {
+        const overlayLocal = document.getElementById("overlayId");
+        overlayLocal.classList.add("showOverlay");
+      }
+
+      function closeOverlay() {
+        const overlay = document.getElementById("overlayId");
+        overlay.classList.remove("showOverlay");
+      }
+
       function showPopup(st) {
         console.log(st);
 
@@ -31,34 +43,30 @@
     </script>
   </head>
   <body>
+    <section class="companyHeader">
+      <p onmouseenter="showOverlay()" onmouseleave="closeOverlay()">Tesla</p>
+      <div class="navigation">
+        <div class="popupContainer">
+          <button class="popupButton">Open CSS</button>
+          <div class="popup">If you see this I am Opened with css</div>
+        </div>
+        <div class="popupContainer">
+          <button class="popupButton" id="popupBtn" onclick="showPopup('stay')">
+            Open with Js
+          </button>
+          <div class="popup" id="popupId">
+            If you see this I am Opened with js
+          </div>
+        </div>
+      </div>
+      <p>Icons</p>
+    </section>
     <div class="mainVideoBackground">
       <video autoplay muted loop>
         <source src="cardrivingnight.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div class="content">
-        <section class="companyHeader">
-          <p>Tesla</p>
-          <div class="navigation">
-            <div class="popupContainer">
-              <button class="popupButton">Open CSS</button>
-              <div class="popup">If you see this I am Opened with css</div>
-            </div>
-            <div class="popupContainer">
-              <button
-                class="popupButton"
-                id="popupBtn"
-                onclick="showPopup('stay')"
-              >
-                Open with Js
-              </button>
-              <div class="popup" id="popupId">
-                If you see this I am Opened with js
-              </div>
-            </div>
-          </div>
-          <p>Icons</p>
-        </section>
         <section class="middleText">
           <p>Electric Cars</p>
           <p class="greenText">
@@ -74,6 +82,11 @@
             </button>
           </div>
         </section>
+      </div>
+    </div>
+    <div class="overlay" id="overlayId">
+      <div class="overlayContent">
+        <p>Overlay Content</p>
       </div>
     </div>
   </body>
